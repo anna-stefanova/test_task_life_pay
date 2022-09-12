@@ -1,0 +1,21 @@
+@import "vars";
+@import "fonts";
+@import "mixins";
+@import "global";
+
+/* Blocks */
+
+
+body {
+  background-color: cornflowerblue;
+  color: aliceblue;
+  font-weight: bold;
+
+}
+.test {
+  &__init {
+    height: 100px;
+    width: 100px;
+    background-color: red;
+  }
+}

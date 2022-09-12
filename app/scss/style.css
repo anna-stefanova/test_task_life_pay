@@ -1,0 +1,14 @@
+/* Blocks */
+body {
+  background-color: cornflowerblue;
+  color: aliceblue;
+  font-weight: bold;
+}
+
+.test__init {
+  height: 100px;
+  width: 100px;
+  background-color: red;
+}
+
+/*# sourceMappingURL=style.css.map */
