@@ -5,17 +5,9 @@
 
 /* Blocks */
 
-
-body {
-  background-color: cornflowerblue;
-  color: aliceblue;
-  font-weight: bold;
-
-}
-.test {
-  &__init {
-    height: 100px;
-    width: 100px;
-    background-color: red;
-  }
-}
+@import "blocks/btn";
+@import "blocks/intro";
+@import "blocks/features";
+@import "blocks/products";
+@import "blocks/advantages";
+@import "blocks/price";

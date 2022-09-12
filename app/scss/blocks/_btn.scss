@@ -1,0 +1,18 @@
+.btn {
+  background-color: $yellow;
+  height: 64px;
+  min-width: 16.3em;
+  padding: 1.1em;
+  font-weight: 600;
+  font-size: 1.13rem;
+  line-height: 1.2;
+  border-radius: 10px;
+  border: none;
+
+  &:focus {
+    outline: 2px dotted $text;
+  }
+  &:hover, &:active {
+    background-color: darken($yellow, 10%);
+  }
+}

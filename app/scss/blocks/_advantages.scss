@@ -1,0 +1,58 @@
+.advantages {
+  padding-top: 4.31rem;
+  padding-bottom: 4.375rem;
+
+  &__title {
+    position: relative;
+    color: $blue;
+    margin-bottom: 1.56em;
+
+    &:before {
+      content: url("../images/decor.png");
+      position: absolute;
+      left: 30px;
+      bottom: 0;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 4rem;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-title {
+      color: $darkblue;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 1.31rem;
+      line-height: 1.34;
+      max-width: 12.5rem;
+      margin-bottom: 1.19em;
+    }
+
+    img {
+      margin-right: 2.625rem;
+    }
+  }
+
+  &__list-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.125rem;
+
+    svg {
+      margin-right: .75rem;
+    }
+  }
+
+  &__btn {
+    display: block;
+    margin: 0 auto;
+  }
+}
