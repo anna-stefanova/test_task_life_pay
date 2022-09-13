@@ -2,25 +2,28 @@
   padding-top: 3.125rem;
   padding-bottom: 3.44rem;
 
+  @include breakpoint($extra-small-bp) {
+    display: flex;
+    flex-direction: column;
+  }
 
   &__title {
     margin-bottom: 1.7em;
     text-align: center;
     position: relative;
 
-    @include breakpoint($small-bp) {
-      &:before {
+    &:before {
+
+      @include breakpoint($small-bp) {
         content: url("../images/decor-mini.png");
         position: absolute;
-        left: 45%;
-        bottom: 15px;
         left: 42%;
-        margin-bottom: 30px;
+        bottom: 35px;
+      }
 
-        @include breakpoint($extra-small-bp) {
-          left: 39%;
-          margin-bottom: 17px;
-        }
+      @include breakpoint($extra-small-bp) {
+        left: 39%;
+        bottom: 22px;
       }
     }
 
@@ -103,5 +106,9 @@
   &__btn {
     margin: 0 auto;
     display: block;
+
+    @include breakpoint($extra-small-bp) {
+      margin: 0;
+    }
   }
 }

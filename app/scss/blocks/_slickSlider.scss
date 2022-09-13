@@ -1,0 +1,46 @@
+.slick-track
+{
+  display: flex !important;
+  align-items: stretch !important;
+}
+
+.slick-slide
+{
+  height: inherit !important;
+}
+
+.slick-slide > div { height: calc(100% - 20px); }
+
+.slick-arrow {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: rgba(63, 141, 203, 0.56);
+  position: absolute;
+  top: calc(50% - 50px);
+  width: 39px;
+  height: 39px;
+  border-radius: 50%;
+
+}
+
+.slick-next {
+  right: 15px;
+  img {
+    margin-top: 5px;
+    margin-left: 3px;
+  }
+}
+
+.slick-prev {
+  visibility: hidden;
+}
+
+.advantages__inner {
+  .slick-arrow {
+    top: 50%;
+    @include breakpoint($extra-small-bp) {
+      top: calc(50% - 50px);
+    }
+  }
+}

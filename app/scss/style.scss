@@ -6,22 +6,11 @@
 /* Blocks */
 
 @import "blocks/btn";
-@import "blocks/slickArrow";
+
 @import "blocks/intro";
 @import "blocks/features";
 @import "blocks/methods";
 @import "blocks/advantages";
 @import "blocks/price";
-
-.slick-track
-{
-  display: flex !important;
-  align-items: stretch !important;
-}
-
-.slick-slide
-{
-  height: inherit !important;
-}
-
-.slick-slide > div { height: calc(100% - 20px); }
+@import "blocks/modal";
+@import "blocks/slickSlider";

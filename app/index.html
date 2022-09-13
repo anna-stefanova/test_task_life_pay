@@ -22,7 +22,7 @@
                     <img src="./images/intro_bg.png" alt="">
                 </div>
             </div>
-            <button class="intro__btn btn">Подключить</button>
+            <button id="modal-btn" class="intro__btn btn">Подключить</button>
         </section>
         <section class="features">
             <h2 class="features__title title">Платежи <span>в любой точке продаж</span></h2>
@@ -82,11 +82,45 @@
             </div>
             <button class="features__btn btn">То, что надо!</button>
         </section>
+        <section class="methods">
+            <h2 class="methods__title title">Что выбрать</h2>
+            <div class="methods__inner">
+                <div class="methods__item">
+                    <div class="methods__item-img">
+                        <img src="./images/prod1.png" alt="">
+                    </div>
+                    <div class="methods__item-content">
+                        <h3>Смарт-терминал</h3>
+                        <p>Умеет всё: карты, чеки, оплату по СБП</p>
+                    </div>
+                </div>
+                <div class="methods__item">
+                    <div class="methods__item-img">
+                        <img src="./images/prod2.png" alt="">
+                    </div>
+                    <div class="methods__item-content">
+                        <h3>Мобильный терминал</h3>
+                        <p>Работает с любым гаджетом по Bleutooth</p>
+                    </div>
+                </div>
+                <div class="methods__item">
+                    <div class="methods__item-img">
+                        <img src="./images/prod3.png" alt="">
+                    </div>
+                    <div class="methods__item-content">
+                        <h3>Смартфон курьера</h3>
+                        <p>Терминал в телефоне: работает на Android, принимает карты и оплату через СБП</p>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section class="advantages">
             <h2 class="advantages__title title">Где можно принимать платежи</h2>
             <div class="advantages__inner">
                 <div class="advantages__item">
-                    <img width="254" height="247" src="./images/advantages1.jpg" alt="">
+                    <div class="advantages__item-img">
+                        <img src="./images/advantages1.jpg" alt="">
+                    </div>
                     <div class="advantages__item-content">
                         <div class="advantages__item-title">У клиента дома или в офисе</div>
                         <ul class="advantages__item-list">
@@ -135,7 +169,9 @@
                     </div>
                 </div>
                 <div class="advantages__item">
-                    <img width="254" height="247" src="./images/advantages2.jpg" alt="">
+                    <div class="advantages__item-img">
+                        <img src="./images/advantages2.jpg" alt="">
+                    </div>
                     <div class="advantages__item-content">
                         <div class="advantages__item-title">В любой точке на карте</div>
                         <ul class="advantages__item-list">
@@ -227,6 +263,19 @@
         </section>
     </div>
 </main>
+<div class="modal">
+    <div class="modal__inner">
+        <div class="modal__content">
+            <div class="modal__content-form">
+                <div class="toggle normal">
+                    <input type="checkbox" id="normal">
+                    <label for="normal" class="toggle-item"></label>
+                </div>
+            </div>
+            <button class="modal__content-btn btn" id="sendModal">Отправить</button>
+        </div>
+    </div>
+</div>
 <script src="js/libs.min.js"></script>
 <script src="js/main.min.js"></script>
 </body>

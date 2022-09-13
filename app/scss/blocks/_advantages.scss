@@ -2,6 +2,11 @@
   padding-top: 4.31rem;
   padding-bottom: 4.375rem;
 
+  @include breakpoint($extra-small-bp) {
+    display: flex;
+    flex-direction: column;
+  }
+
   &__title {
     position: relative;
     color: $blue;
@@ -21,15 +26,22 @@
   }
 
   &__inner {
-    display: flex;
-    justify-content: space-around;
     margin-bottom: 4rem;
   }
 
   &__item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: flex !important;
+    justify-content: space-evenly !important;
+    align-items: center !important;
+    margin-right: 50px;
+
+    @include breakpoint($small-bp) {
+      flex-direction: column ;
+      justify-content: center !important;
+      text-align: center;
+      margin-right: 25px;
+    }
+
 
     &-title {
       color: $darkblue;
@@ -41,8 +53,22 @@
       margin-bottom: 1.19em;
     }
 
-    img {
-      margin-right: 2.625rem;
+    &-img {
+      max-width: 254px;
+      max-height: 247px;/*
+      margin-right: 2.625rem;*/
+
+      @include breakpoint($small-bp) {
+        max-width: 180px;
+        border-radius: 21.2px;
+        overflow: hidden;
+        margin: 20px;
+      }
+
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
     }
   }
 
@@ -59,5 +85,9 @@
   &__btn {
     display: block;
     margin: 0 auto;
+
+    @include breakpoint($extra-small-bp) {
+      margin: 0;
+    }
   }
 }

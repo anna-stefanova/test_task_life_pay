@@ -1,0 +1,85 @@
+.modal {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($text, .75);
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.modal__content {
+  max-width: 650px;
+  max-height: calc(100vh - 50px);
+  padding: 31px 52px;
+  overflow: hidden;
+
+  background-color: $primary;
+  border-radius: 5px;
+
+  &-form {
+    width: 100%;
+    height: 150px;
+  }
+
+  &-btn {
+    display: block;
+  }
+
+}
+
+.toggle {
+  position: relative;
+  display: inline-block;
+}
+
+input {
+  height: 40px;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 40px;
+}
+
+label.toggle-item {
+  position: relative;
+  display: inline-block;
+  width: 43px;
+  height: 22px;
+  margin: 0;
+  background: #B9C8E0;
+  border-radius: 12px;
+  cursor: pointer;
+  outline: none;
+  appearance: none;
+  transition: all .3s ease;
+  &:after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    width: 18px;
+    height: 18px;
+    background: linear-gradient(329.86deg, #FFFFFF 12.41%, #E0E0E0 85.26%);
+    border: 1px solid #FFFFFF;
+    border-radius: 50%;
+    transform: translateX(0);
+    transition: all .3s ease;
+  }
+
+}
+#normal:checked + label::after {
+  transform: translateX(calc(100% + 3px));
+}
+#normal:checked + .toggle-item{
+  background: #3F8DCB;
+}
+
+
+
+
