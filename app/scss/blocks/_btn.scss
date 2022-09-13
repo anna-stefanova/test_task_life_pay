@@ -1,13 +1,22 @@
 .btn {
   background-color: $yellow;
-  height: 64px;
+  max-height: 64px;
   min-width: 16.3em;
-  padding: 1.1em;
+  padding: 1.3em;
   font-weight: 600;
   font-size: 1.13rem;
   line-height: 1.2;
   border-radius: 10px;
   border: none;
+
+  @include breakpoint($large-bp) {
+    font-size: .9rem;
+  }
+
+  @include breakpoint($medium-bp) {
+    padding-right: .6rem;
+  }
+
 
   &:focus {
     outline: 2px dotted $text;

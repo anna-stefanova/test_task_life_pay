@@ -49,7 +49,7 @@ function scripts() {
         'node_modules/mixitup/dist/mixitup.js',
         'node_modules/rateyo/src/jquery.rateyo.js',
         'node_modules/slick-carousel/slick/slick.js',
-        'node_modules/owl.carousel/dist/owl.carousel.min.js'
+        /*'node_modules/owl.carousel/dist/owl.carousel.min.js'*/
     ])
         .pipe(concat('libs.min.js'))
         .pipe(uglify())
@@ -81,7 +81,9 @@ function style() {
     return src([
         'node_modules/css-reset-and-normalize/css/reset-and-normalize.css',
         'node_modules/rateyo/src/jquery.rateyo.css',
-        'node_modules/owl.carousel/dist/assets/owl.carousel.css',
+        'node_modules/slick-carousel/slick/slick.css',
+        /*'node_modules/slick-carousel/slick/slick-theme.css',*/
+        /*'node_modules/owl.carousel/dist/assets/owl.carousel.css',*/
         /*'node_modules/owl.carousel/dist/assets/owl.theme.default.css'*/
 
     ])

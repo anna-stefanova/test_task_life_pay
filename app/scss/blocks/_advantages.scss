@@ -6,12 +6,17 @@
     position: relative;
     color: $blue;
     margin-bottom: 1.56em;
+    text-align: center;
 
     &:before {
       content: url("../images/decor.png");
       position: absolute;
       left: 30px;
       bottom: 0;
+
+      @include breakpoint($large-bp) {
+        display: none;
+      }
     }
   }
 

@@ -1,25 +1,112 @@
 .intro {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 10em 6em 5em 1.55em;
   font-size: 1.25rem;
 
+  @include breakpoint($large-bp) {
+    padding-right: 1em;
+  }
+
+  @include breakpoint($medium-bp) {
+    padding-right: 0;
+  }
+
+  @include breakpoint($small-bp) {
+    padding-left: 0;
+
+  }
+
+  @include breakpoint($tiny-bp) {
+    padding-top: 5em;
+
+  }
+
+  @include breakpoint($extra-small-bp) {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 3em;
+  }
+
+
   &__inner {
-    max-width: 30em;
+    display: flex;
+    justify-content: space-between;
+
+    @include breakpoint($tiny-bp) {
+      display: block;
+    }
+  }
+
+  &__content {
+    color: #000000;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.6;
+    max-width: 25em;
+    margin-right: 3em;
+
+    @include breakpoint($large-bp) {
+      font-size: 1rem;
+    }
+
+    @include breakpoint($medium-bp) {
+      font-size: .8rem;
+    }
+
+    @include breakpoint($tiny-bp) {
+      max-width: 100%;
+      margin-right: 0;
+    }
   }
 
   &__title {
     font-size: 2.38rem;
     line-height: 1.26;
     margin-bottom: .5em;
+
+    @include breakpoint($large-bp) {
+      font-size: 2rem;
+    }
+
+    @include breakpoint($medium-bp) {
+      font-size: 1.4rem;
+    }
   }
-  &__desc {
-    color: #000000;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1.6;
-    max-width: 21.5em;
-    margin-bottom: 2em;
+
+
+  &__img {
+    max-width: 342px;
+
+    img {
+      width: 100%;
+
+      object-fit: cover;
+    }
+    @include breakpoint($medium-bp) {
+      max-width: 310px;
+    }
+    @include breakpoint($small-bp) {
+      max-width: 280px;
+    }
+    @include breakpoint($tiny-bp) {
+      max-width: 342px;
+      margin: 2rem auto 0 auto;
+    }
+    @include breakpoint($extra-small-bp) {
+      margin: 2rem 0 0;
+    }
+  }
+
+  &__btn {
+    margin-top: -1rem;
+    display: block;
+    @include breakpoint($medium-bp) {
+      margin-top: -3rem;
+    }
+    @include breakpoint($tiny-bp) {
+      margin: 2rem auto 0 auto;
+    }
+    @include breakpoint($extra-small-bp) {
+      margin: 2rem 0 0;
+    }
   }
 }

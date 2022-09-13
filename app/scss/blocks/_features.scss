@@ -5,6 +5,34 @@
 
   &__title {
     margin-bottom: 1.7em;
+    text-align: center;
+    position: relative;
+
+    @include breakpoint($small-bp) {
+      &:before {
+        content: url("../images/decor-mini.png");
+        position: absolute;
+        left: 45%;
+        bottom: 15px;
+        left: 42%;
+        margin-bottom: 30px;
+
+        @include breakpoint($extra-small-bp) {
+          left: 39%;
+          margin-bottom: 17px;
+        }
+      }
+    }
+
+    @include breakpoint($small-bp) {
+      margin-bottom: 1.5em;
+    }
+
+    span {
+      @include breakpoint($small-bp) {
+        display: block;
+      }
+    }
   }
 
   &__inner {
@@ -13,14 +41,45 @@
     flex-wrap: wrap;
     gap: 5rem;
     margin-bottom: 3.56rem;
+
+    @include breakpoint($large-bp) {
+      justify-content: space-between;
+      column-gap: 2rem;
+      row-gap: 3rem;
+    }
+
+    @include breakpoint($medium-bp) {
+      justify-content: space-evenly;
+    }
+
+    @include breakpoint($extra-small-bp) {
+      gap: 3rem;
+    }
   }
 
   &__item {
     display: flex;
     max-width: 25rem;
 
+    @include breakpoint($large-bp) {
+      max-width: 23rem;
+    }
+    @include breakpoint($extra-small-bp) {
+      display: block;
+    }
+
     &-icon {
       margin-right: 1.69rem;
+      @include breakpoint($large-bp) {
+        margin-right: 1.3rem;
+      }
+
+      svg {
+        @include breakpoint($extra-small-bp) {
+          width: 40px;
+          height: 40px;
+        }
+      }
     }
     &-title {
       font-size: 1.75rem;
@@ -28,6 +87,13 @@
       line-height: 1.3;
       color: $blue;
       margin-bottom: .54em;
+      @include breakpoint($large-bp) {
+        font-size: 1.55rem;
+      }
+
+      @include breakpoint($extra-small-bp) {
+        font-size: 1.25rem;
+      }
     }
     &-desc {
       line-height: 1.375;

@@ -1,19 +1,22 @@
-.products {
+.methods {
   padding-top: 3.44rem;
   padding-bottom: 3.375rem;
 
   &__title {
     margin-bottom: 1.77em;
+    text-align: center;
   }
 
   &__inner {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    gap: 27px;
+    align-items: stretch;
   }
 
   &__item {
-    width: 33%;
+    max-width: 95%;
+    height: 100%;
     border-radius: 1.625rem;
     overflow: hidden;
     box-shadow: 0 8px 10px rgba(107, 139, 217, 0.1);
