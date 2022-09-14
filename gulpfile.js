@@ -1,6 +1,7 @@
 const { src, dest, watch, parallel, series } = require('gulp');
 
 const scss = require('gulp-sass')(require('sass'));
+let cssnano = require('gulp-cssnano');
 const concat = require('gulp-concat');
 const browser_sync = require('browser-sync').create();
 const uglify =require('gulp-uglify-es').default;
@@ -72,7 +73,7 @@ function sass() {
             grid: true
         }))
         .pipe(concat('style.min.css'))
-
+        .pipe(cssnano())
         .pipe(dest('dist/css/'))
         .pipe(browser_sync.stream())
 }
