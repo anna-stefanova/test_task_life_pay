@@ -651,7 +651,10 @@ margin-right: 2.625rem;*/
 }
 
 .modal__content {
-  max-width: 650px;
+  display: flex;
+  flex-direction: column;
+  margin: 10% auto;
+  max-width: 397px;
   max-height: calc(100vh - 50px);
   padding: 31px 52px;
   overflow: hidden;

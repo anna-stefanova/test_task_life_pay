@@ -70,16 +70,34 @@ $(function () {
 
     /* Open modal window */
 
-    let btn = document.querySelector('#modal-btn');
-    let modal = document.querySelector('.modal');
-    let btnSend = document.querySelector('#sendModal');
-
-    btn.addEventListener("click", function () {
-        modal.style.display = "flex";
-        btnSend.addEventListener("click", function () {
-            modal.style.display = "none";
-        })
+    $('#modal-btn').click(function() {
+        $('.modal').fadeIn();
+        return false;
     });
 
+    $('.modal-close').click(function() {
+        $(this).parents('.modal').fadeOut();
+        return false;
+    });
+
+    $(document).keydown(function(e) {
+        if (e.keyCode === 27) {
+            e.stopPropagation();
+            $('.modal').fadeOut();
+        }
+    });
+
+    $('.modal').click(function(e) {
+        if ($(e.target).closest('.modal__inner').length === 0) {
+            $(this).fadeOut();
+        }
+    });
+
+    let data = new URL(document.location).searchParams.get("slider");
+    if (data !== null || true) {
+        if ((new URL(document.location)).searchParams.get("slider") === "close") {
+            $('.methods').css('display', 'none');
+        }
+    }
 });
 
